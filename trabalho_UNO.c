@@ -987,7 +987,7 @@ void troca_maos(Player *um, Player *dois){
     *um->jogador->inicio = auxdois;
 }
 void salvar_jogadas(Descarte *D, Player *j, FILE *fp){
-    fp = fopen("Jogadas.txt", "w");
+    fp = fopen("Jogadas.txt", "w+");
     fprintf(fp,"\n\tJogada %s, %i[%s]\n", j->nome, D->monte_descarte[D->topo-1].naipe,D->monte_descarte[D->topo-1].cor);
     fclose(fp);
 }
